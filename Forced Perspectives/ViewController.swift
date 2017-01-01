@@ -95,7 +95,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            // if an image exists at the url, set the image and title
+            // If an image exists at the url, set the image and title
             let imageURL = URL(string: imageUrlString)
             if let imageData = try? Data(contentsOf: imageURL!) {
                 performUIUpdatesOnMain {
