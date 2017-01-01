@@ -63,7 +63,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            // parse the data
+            // Parse the data
             let parsedResult: [String:AnyObject]!
             do {
                 parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:AnyObject]
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
                 return
             }
             
-            // select a random photo
+            // Select a random photo
             let randomPhotoNumber = self.generateRandomNumber(upperBound: photoArray.count)
             let photoDictionary = photoArray[randomPhotoNumber] as [String: AnyObject]
             let photoTitle = photoDictionary[Constants.FlickrResponseKeys.Title] as? String
