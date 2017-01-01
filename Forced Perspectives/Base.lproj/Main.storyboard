@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Forced_Perspectives" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,71 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="myC-P8-qHs">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ik0-pY-1c2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydc-yL-AhJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="162"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forced Perspectives" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfi-MW-ekl">
+                                                <rect key="frame" x="20" y="71" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zfi-MW-ekl" firstAttribute="leading" secondItem="ydc-yL-AhJ" secondAttribute="leading" constant="20" id="56M-lK-JfA"/>
+                                            <constraint firstAttribute="trailing" secondItem="zfi-MW-ekl" secondAttribute="trailing" constant="20" id="pMV-3D-P2f"/>
+                                            <constraint firstItem="zfi-MW-ekl" firstAttribute="centerY" secondItem="ydc-yL-AhJ" secondAttribute="centerY" id="zfR-ty-4BZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96J-tQ-TAI">
+                                        <rect key="frame" x="0.0" y="162" width="375" height="161.5"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t94-mG-B0t">
+                                        <rect key="frame" x="0.0" y="323.5" width="375" height="162"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-mC-dJY">
+                                        <rect key="frame" x="0.0" y="485.5" width="375" height="161.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fu-Yi-IjX">
+                                                <rect key="frame" x="118" y="65.5" width="139" height="30"/>
+                                                <state key="normal" title="Next Random Image"/>
+                                                <connections>
+                                                    <action selector="nextRandomImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lh1-Sz-e0e"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1Fu-Yi-IjX" firstAttribute="centerY" secondItem="HBm-mC-dJY" secondAttribute="centerY" id="gWh-Jc-hHU"/>
+                                            <constraint firstItem="1Fu-Yi-IjX" firstAttribute="centerX" secondItem="HBm-mC-dJY" secondAttribute="centerX" id="uLa-zS-0fl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ik0-pY-1c2" secondAttribute="bottom" id="6Xr-Zc-Hqx"/>
+                            <constraint firstItem="ik0-pY-1c2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Qo-P0-TsZ"/>
+                            <constraint firstItem="myC-P8-qHs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Gge-wy-m7u"/>
+                            <constraint firstAttribute="trailing" secondItem="ik0-pY-1c2" secondAttribute="trailing" id="JJs-AS-dm0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="myC-P8-qHs" secondAttribute="bottom" id="UQK-ar-uie"/>
+                            <constraint firstAttribute="trailing" secondItem="myC-P8-qHs" secondAttribute="trailing" id="fFz-7Z-Oxk"/>
+                            <constraint firstItem="myC-P8-qHs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gME-ue-Kf5"/>
+                            <constraint firstItem="ik0-pY-1c2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="oOc-UT-1Hu"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="myC-P8-qHs" id="E8K-u2-R0m"/>
+                        <outlet property="imageTitleLabel" destination="zfi-MW-ekl" id="GJ0-4U-ORg"/>
+                        <outlet property="nextRandomImageButtonOutlet" destination="1Fu-Yi-IjX" id="CNu-so-AFJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
